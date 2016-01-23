@@ -1,0 +1,25 @@
+<% if @student.errors %>
+<%=@student.errors.full_messages%>
+
+
+<% else %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>Dept:</strong>
+  <%= @student.dept %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
+<%end%>
